@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aarts Kitchen</title>
+    <style>
+        *
+    {
+        background-color: peachpuff;
+    }
+        section{
+            color:brown;
+           
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align:center;
+        }
+        h2
+        {
+            font-style: italic;
+            color:plum;
+        
+        }
+        .input_container
+        {
+            text-align:center;
+            display:flex;
+            justify-content: center;
+           
+        }
+        .image_container1
+        {
+            margin-top:20px;
+            width: 100%;
+            margin-left:20px;
+
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+    border-radius: 4px;
+        }
+        .content
+        {
+            display:inline-block;
+        }
+        .name
+        {
+            color:red
+        }
+        .description
+        {
+            text-align: center;
+        }
+        .descript
+        {
+            color:#551A8B;
+            
+
+        }
+        .name1
+        {
+            color:#551A8B;
+        }
+    </style>
+    </head>
+
+
+
+
+
+    <body>
+        <section>
+            <h1>Welcome to Heavenly Bites Kitchen</h1>
+            <h2 class="descript">Recepies that rules the Kitchen</h2>
+        </section>
+        <div class="input_container">
+            <input id="user_input" type="text" placeholder="Search">
+            <button id="search">Go</button>
+        </div>
+
+        <div class="content">
+            <div class="image_container" >
+                <img class="image_container1" src="C:\Users\user\Desktop\recepie finder\images.jfif">
+            </div>
+            <div class="description">
+                <a href="C:\Users\user\Desktop\recepie finder\recepeie.html">
+                <h2 class="name">Panner Butter Masala</h2>
+            </a>
+                <h3 class="name1">Cooking Time:30mins</h3>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="image_container" >
+                <img class="image_container1" src="C:\Users\user\Desktop\recepie finder\images (3).jfif">
+            </div>
+          
+            <div class="description">
+                <a href="C:\Users\user\Desktop\recepie finder\sphagetti.html">
+                <h2 class="name">Sphagetti</h2>
+                <h3>Cooking Time:30mins</h3>
+                </a>
+            </div>
+        </div>
+
+       
+        <div class="content">
+            <div class="image_container" >
+                <img class="image_container1" src="C:\Users\user\Desktop\recepie finder\images (7).jfif">
+            </div>
+            <div class="description">
+                <a href="C:\Users\user\Desktop\recepie finder\pasta.html">
+                <h2 class="name">Pink Sauce Pasta</h2>
+                <h3>Cooking Time:30mins</h3>
+                </a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="image_container" >
+                <img class="image_container1" src="C:\Users\user\Desktop\recepie finder\images (6).jfif">
+            </div>
+            <div class="description">
+                <a href="C:\Users\user\Desktop\recepie finder\briyani.html">
+                <h2 class="name">Hyderabadi Briyani</h2>
+                <h3>Cooking Time:30mins</h3>
+            </a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="image_container" >
+                <img class="image_container1" src="C:\Users\user\Desktop\recepie finder\images (9).jfif">
+            </div>
+            <div class="description">
+                <a href="C:\Users\user\Desktop\recepie finder\macroons.html">
+                <h2 class="name">Colourful Macroons</h2>
+                <h3>Cooking Time:40mins</h3>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="image_container" >
+                <img class="image_container1" src="C:\Users\user\Desktop\recepie finder\New-Bite-Size-Desserts-Feature.jpg">
+            </div>
+            <div class="description">
+                <a href="C:\Users\user\Desktop\recepie finder\cheese.html">
+                <h2 class="name">Blueberry Delight</h2>
+                <h3>Cooking Time:20mins</h3>
+                </a>
+
+            </div>
+        </div>
+        <div class="content">
+            <div class="image_container" >
+                <img class="image_container1" src="C:\Users\user\Desktop\recepie finder\Picture1.jpg">
+            </div>
+            <div class="description">
+                <a href="C:\Users\user\Desktop\recepie finder\kerala.html">
+                <h2 class="name">Kerala Payasam</h2>
+                <h3>Cooking Time:40mins</h3>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="image_container" >
+                <img class="image_container1" src="C:\Users\user\Desktop\recepie finder\download (5).jfif">
+            </div>
+            <div class="description">
+                <a href="C:\Users\user\Desktop\recepie finder\mil.html">
+                <h2 class="name">Paal Kolukattai</h2>
+                <h3>Cooking Time:20mins</h3>
+            </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="image_container" >
+                <img class="image_container1" src="C:\Users\user\Desktop\recepie finder\Kalakand-1-scaled.jpg">
+            </div>
+            <div class="description">
+                <a href="C:\Users\user\Desktop\recepie finder\cake.html">
+                <h2 class="name">Milk Cake</h2>
+                <h3>Cooking Time:45mins</h3>
+                </a>
+            </div>
+        </div>
+       
+    <script>
+        // Function to handle the search functionality
+        function filterRecipes() {
+            const userInput = document.getElementById('user_input')
+            const recipes = document.querySelectorAll('.content');
+            let foundRecipe = false;
+
+            recipes.forEach(recipe => {
+                const recipeName = recipe.getAttribute('data-name').toLowerCase();
+
+                if (recipeName === userInput) {
+                    foundRecipe = true;
+                    const recipeLink = recipe.querySelector('a').getAttribute('href');
+                    window.location.href = recipeLink; // Navigate to recipe page
+                }
+            });
+
+            if (!foundRecipe) {
+                document.getElementById('error_message').textContent = `Recipe "${userInput}" not found.`;
+            } else {
+                document.getElementById('error_message').textContent = ''; // Clear error message
+            }
+        }
+
+        // Attach event listener to the search button
+        document.getElementById('search').addEventListener('click', filterRecipes);
+
+        // Optional: Attach event listener to the input field to trigger search on Enter key press
+        document.getElementById('user_input').addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                filterRecipes();
+            }
+        });
+    </script>
+        
+    </body>
+</html>
