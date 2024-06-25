@@ -182,40 +182,7 @@
             </div>
         </div>
        
-    <script>
-        // Function to handle the search functionality
-        function filterRecipes() {
-            const userInput = document.getElementById('user_input')
-            const recipes = document.querySelectorAll('.content');
-            let foundRecipe = false;
-
-            recipes.forEach(recipe => {
-                const recipeName = recipe.getAttribute('data-name').toLowerCase();
-
-                if (recipeName === userInput) {
-                    foundRecipe = true;
-                    const recipeLink = recipe.querySelector('a').getAttribute('href');
-                    window.location.href = recipeLink; // Navigate to recipe page
-                }
-            });
-
-            if (!foundRecipe) {
-                document.getElementById('error_message').textContent = `Recipe "${userInput}" not found.`;
-            } else {
-                document.getElementById('error_message').textContent = ''; // Clear error message
-            }
-        }
-
-        // Attach event listener to the search button
-        document.getElementById('search').addEventListener('click', filterRecipes);
-
-        // Optional: Attach event listener to the input field to trigger search on Enter key press
-        document.getElementById('user_input').addEventListener('keyup', function(event) {
-            if (event.key === 'Enter') {
-                filterRecipes();
-            }
-        });
-    </script>
+    
         
     </body>
 </html>
